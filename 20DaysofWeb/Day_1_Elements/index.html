@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>May_1 Day_1 20DaysOfWeb</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://shrtco.de/ZpRcx" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 4px;
+            font-family: "Rajdhani";
+            justify-content: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Hey, Hola...!!</h2>
+    <div id="main">
+        <div id="outer">
+            <div id="inner">
+                <h1>Jasmine Shaik</h1>
+            </div>
+        </div>
+        <br>
+        <div id="b">
+            <button class="btn btn-full" onclick="Hi('white','black');">Light Mode</button>
+            <br>
+            <button class="btn btn-full one" onclick="Hi('black','white');">Dark Mode</button>
+        </div>
+    </div>
+    <br>
+    <br>
+    <script>
+        function Hi(color, color1) {
+            document.body.style.background = color;
+            document.getElementById("outer").style.background = color1;
+            document.getElementById("outer").style.color = color; document.getElementById("inner").style.background = color;
+            document.getElementById("inner").style.color = color1;
+
+        }
+
+
+
+
+    </script>
+    <div class="media">
+        <img class="mr-3" src="elements.png" alt="General image">
+        <div class="media-body">
+            <h5 class="mt-0">Types of Elements</h5>
+            <br> In HTML, most elements are defined as block level or inline elements. Block level elements start from a
+            new line. For example: h1, form, li, ol, ul, p, pre, table, div, etc. Inline elements are normally displayed
+            without line breaks. For example: b, a, strong, img, input, em, span, etc. The div element is a block-level
+            element that is often used as a container for other HTML elements. When used together with some CSS styling,
+            the div element can be used to style blocks of content.
+            <br> Also there are some other elements can be used either as block level elements or inline elements. This
+            includes the following elements:
+            <ul>
+                <li>IFRAME - Inline frame</li>
+                <li>INS - inserted text</li>
+                <li>MAP - image map</li>
+                <li>OBJECT - embedded object</li>
+                <li>SCRIPT - script within an HTML document</li>
+            </ul> You can insert inline elements inside block elements.
+            <span style="color:red;"> For example, you can have multiple span elements inside a div element as this text
+                shown which has been used in between div tags.</span>
+            <br> You can Check the source code here:
+            <a href="https://github.com/jasmine-s/20_DaysOfWeb">Go to GitHub</a>
+            <br>
+            Want To Learn More..!!
+            <a href="https://www.w3schools.com/html/html_elements.asp">Check Here</a>
+        </div>
+    </div>
+    <pre>
+
+
+    </pre>
+    <p class="fixed-bottom" style="font-size:17px;color:#ADD8E6; background-color:#252525;"> ©T20 Copyrights made by
+        <i>Jasmine Shaik</i></p>
+
+</body>
+
+</html>
