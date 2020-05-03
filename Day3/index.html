@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hey! I am JasmineShaik Day_1</title>
+    <link rel="shortcut icon" type="mee/png"
+        href="https://cdn.glitch.com/f04206de-f6ee-4045-86a5-3aa2649f233f%2Fmee.png?v=1588347082200.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://shrtco.de/ZpRcx" rel="stylesheet">
+    <style>
+        body {
+
+            color: #2E4053;
+            margin: 4px;
+            font-family: 'rajdhani';
+            justify-content: center;
+            background-color: #EBF5FB;
+            background-color: #f3dfe3;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Hey, Hola...!!</h2>
+    <div id="main">
+        <h2>Day-3 : CSS - Animations</h2>
+        <div class="grid-3">
+            <div class="box">
+                Constant Box
+            </div>
+            <div class="size">
+                I can change My Size
+            </div>
+            <div class="box move">
+                Movable Box
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="media">
+        <img class="mr-3" src="https://imgur.com/EzP77gB.gif" alt="General image">
+        <div class="media-body">
+            <h5 class="mt-0">CSS Animations</h5>
+            <br> An animation lets an element gradually change from one style to another.
+            You can change <br>as many CSS properties as you want to, as many times you want to.
+            Keyframes hold <br>the styles the element will have at certain times
+            <br>
+            <b>The @keyframes Rule</b>
+            <br>
+            When you specify CSS styles inside the @keyframes rule, the animation will gradually change from the current
+            style to the new style at certain times.
+            To get an animation to work, you must bind the animation to an element.
+            <br>
+            As an alternative to using percentages, you can use from and to keywords, where:
+            from is a starting offset of 0%
+            to is an ending offset of 100%.
+
+            <ul>
+                CSS suppors different animation properties as follows
+                <br>
+                <li> animation-name</li>
+                <li>animation-duration</li>
+                <li>animation-delay</li>
+                <li>animation-iteration-count</li>
+                <li>animation-direction</li>
+                <li>animation-timing-function</li>
+                <li>animation-fill-mode</li>
+                <li>animation</li>
+            </ul>
+
+            <br> You can Check the source code here:
+            <a href="https://github.com/jasmine-s/20_DaysOfWeb">Go to GitHub</a>
+            <br> Want To Learn More..!!
+            <a href="https://www.w3schools.com/css/css3_animations.asp">Check Here</a>
+        </div>
+    </div>
+    <br>
+    <pre>    </pre>
+    <p class="fixed-bottom" style="font-size:17px;color:#ADD8E6; background-color:#252525;"> ©T20 Copyrights made by
+        <i>Jasmine Shaik</i></p>
+    <style>
+        h1 {
+            text-decoration: underline;
+            font-family: "lobster";
+            margin-top: 3%;
+            font-size: 22px;
+        }
+
+        .media {
+            margin-top: 5%;
+        }
+
+        .mr-3 {
+            width: 180px;
+            height: 170px;
+            border-radius: 5px;
+            transition: all 3s linear;
+            box-shadow: 2px 2px 2px 2px #2E4053;
+        }
+
+        h2,
+        p,
+        .media h5 {
+            margin-top: 5%;
+            text-align: center;
+            font-weight: bold;
+            text-shadow: 0px 1px 1px #ADD8E6;
+        }
+
+        #main {
+            border-radius: 20px;
+            border: 1px dotted #ADD8E6;
+            box-shadow: inset 5px 5px 10px #f3dfe3, inset -5px -5px 10px #2E4053;
+            z-index: 5;
+        }
+
+        .grid-3 {
+
+
+            display: grid;
+            grid-template-columns: 33.33% 33.33% 33.33%;
+            padding: 5%;
+        }
+
+        img {
+            width: 55.33%;
+            justify-content: center;
+          background-color:#fff;
+          background-size:3px;
+
+        }
+
+        .content {
+
+            justify-content: center;
+            display: flex;
+            box-sizing: 70% 30%;
+        }
+
+        .i {
+            width: 300px;
+            margin-top: 10px;
+        }
+
+        @keyframes ex {
+            0% {
+                background-color: gray;
+            }
+
+            25% {
+                background-color: #fff;
+            }
+
+            50% {
+                background-color: black;
+            }
+
+            100% {
+                background-image: linear-gradient(90deg, #80d0c7, #13547a);
+            }
+        }
+
+        /* The element to apply the animation to */
+        .box {
+            width: 175px;
+            height: 190px;
+            background-color: #555555;
+            border-radius: 30%;
+            font-size: 14px;
+            font-family: 'Lobster';
+            box-shadow: 7px 10px 15px 1px #fff;
+            text-align: center;
+            margin: 0 auto;
+            background-color: #fff;
+
+            transform: rotate(20deg);
+            animation: ex 6s infinite;
+        }
+
+        @keyframes changesize {
+            0% {
+                width: 400px;
+            }
+
+            50% {
+                background-color: #c2e9fb;
+            }
+
+            100% {
+                background-image: linear-gradient(90deg, #a1c4fd, #c2e9fb);
+            }
+        }
+
+        .size {
+            width: 175px;
+            height: 300px;
+            height: 190px;
+            font-size: 40px;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 10px;
+            background-color: #a1c4fd;
+            animation: changesize 3s linear infinite;
+        }
+
+        .move {
+            animation: move 5s infinite;
+            transform: rotate(-20deg);
+        }
+
+        @keyframes move {
+            0% {
+                position: fixed;
+            }
+
+            50% {
+                margin-left: 30%;
+            }
+
+            100% {
+                margin-right: 30%;
+            }
+        }
+    </style>
+
+</body>
+
+</html>
