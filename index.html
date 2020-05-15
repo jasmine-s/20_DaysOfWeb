@@ -1,0 +1,120 @@
+ <!doctype html>
+<html>
+ <head> 
+  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&amp;display=swap" rel="stylesheet"> 
+  <link rel="shortcut icon" type="mee/png" href="https://cdn.glitch.com/f04206de-f6ee-4045-86a5-3aa2649f233f%2Fmee.png?v=1588347082200.png"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+  <link href="https://shrtco.de/ZpRcx" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Baloo+Thambi+2|Concert+One|Cookie|Great+Vibes|Josefin+Sans|Kaushan+Script|Satisfy|Slabo+27px|Titillium+Web|Yanone+Kaffeesatz&amp;display=swap" rel="stylesheet"> 
+ </head> 
+ <body> 
+  <h1>Practice Canvas</h1> 
+  <div id="can"> 
+   <canvas id="myCanvas" width="200" height="100" style="border:2px solid maroon;"></canvas> 
+  </div> 
+  <br> 
+  <div id="can"> 
+   <canvas id="myCanvasimg" width="320px" height="430px" style="color:#fff;border:2px solid maroon;"></canvas> 
+  </div> 
+  <br> 
+  <div id="can"> 
+   <canvas id="rotateimg" width="320px" height="430px" style="color:#fff;border:2px solid maroon;"></canvas> 
+  </div> 
+  <br> 
+  <div class="n"> 
+   <div> 
+    <h1> MEME Creation With Canvas ♥</h1> 
+   </div> 
+   <canvas id="meme" width="600px" height="800px" style="color:#fff;border:5px solid #fff;"></canvas> 
+  </div> 
+  <script>
+  //canv 0
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+// Create gradient
+var grd = ctx.createRadialGradient(15,10,5,90,60,100);
+grd.addColorStop(0.52,"#bbead6");
+grd.addColorStop(0.64,"#fff");
+
+// Fill with gradient
+ctx.fillStyle='#e43f5a';
+ctx.fillRect(0,0,45,20);
+ctx.fillStyle = grd;
+ctx.fillRect(25,10,150,80);
+
+ctx.strokeText ('set the Image' ,50,55);
+
+ctx.fillStyle='#e43f5a';
+ctx.fillRect(150,80,55,20);
+//canv1
+var cs = document.querySelector("#myCanvasimg");
+var ctx1 = cs.getContext("2d");
+var img= new Image();
+img.className+='imgs';
+img.onload=function(){
+    ctx1.drawImage(img,10,5,300,400);
+}
+img.src="https://www.freeiconspng.com/uploads/nature-icon-15.png";
+
+ctx1.fillStyle='#e43f5a';
+ctx1.fillRect(2,1,35,30);
+ctx1.fillStyle='#e43f5a';
+ctx1.fillRect(270,400,60,35);
+ctx1.fillStyle = grd;
+ctx1.font = "25px times";
+ctx1.fillText('Try to rotate image',10,420);
+ctx1.fillStyle ="white";
+//canv 2
+var csr = document.querySelector("#rotateimg");
+var ctx2 = csr.getContext("2d");
+var img1= new Image();
+img1.onload=function(){
+    ctx2.drawImage(img1,10,5,300,400);
+    
+}
+img1.src="https://www.freeiconspng.com/uploads/nature-icon-15.png";
+ctx2.fillStyle='#e43f5a';
+ctx2.fillRect(2,1,35,30);
+ctx2.fillStyle='#e43f5a';
+ctx2.fillRect(270,400,60,35);
+ctx2.font = "bold 20px Arial";
+ctx2.fillText('Rotating img_-170',100,420);
+ctx2.fillStyle ="#e43f5a";
+ctx2.rotate(-170);
+
+//Meme
+
+var m = document.querySelector("#meme");
+var ctx3 = m.getContext("2d");
+ctx3.font = "bold 40px times";
+ctx3.fillStyle ="#e43f5a";
+ctx3.fillText('We Are Not in college But..!',43,60);
+
+
+var img2= new Image();
+img2.onload=function(){
+    ctx3.drawImage(img2,50,85,500,300);
+    
+}
+
+img2.src="https://imgur.com/UbiX5B6.jpg";
+ctx3.fillStyle ="#e43f5a";
+ctx3.font = "bold 40px times";
+ctx3.fillText('We Enjoy classes Like This;)',50,435);
+
+
+var img3= new Image();
+img3.onload=function(){
+    ctx3.drawImage(img3,50,475,500,300);
+    
+}
+img3.src="https://imgur.com/GVd0SmK.gif";
+
+
+
+
+</script> 
+  <p class="fixed-bottom" style="font-size:22px;color:#162447; background-color:#e43f5a;"> ©T20 Copyrights made by <i>Jasmine Shaik</i></p> 
+ </body>
+</html>
