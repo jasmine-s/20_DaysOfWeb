@@ -17,7 +17,69 @@
  </head> 
 
  <body> 
+<style>
+ *{
+    margin:-1px;
+}
+body {
+color:#162447;
+font-family: 'Cookie';
+    font-size:20vh;
+    background-color:#162447;
+    text-align:center;
+    
+    
+    
+}
+h1{
+    letter-spacing:6px;
+    -webkit-text-stroke: 0.639px #e43f5a;
+    text-shadow:3px 3px 2px #f5a7a7;
+    font-size:30%;
+}
 
+#can{
+    box-shadow: -1px -1px 1px #000, inset 1px 3px 2px #1b1b2f;
+    background-color:#1f4068;
+    margin: auto;
+    top: 4vh;
+    left: 1px;
+    animation:5s anim;
+    animation-iteration-count:2;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+canvas{
+margin:10px;
+padding:5px;
+    box-shadow: inset -1px -1px 12px #1f4068, inset 7px 7px 12px #1b1b2f;
+    border-radius:20px;
+}
+#rotateimg{
+    background:linear-gradient(50deg, #1f4068,  #1b1b2f,ghostwhite);
+    
+}
+.n{
+  background-color:ghostwhite;
+  display:absolute;
+  
+  font-family:'Balsamiq Sans', cursive;
+  box-shadow: -1px -1px 1px #FFFAFA, inset 1px 3px 2px #1b1b2f; 
+}
+
+
+@keyframes anim{
+    0%{
+        transform:scale(-1,0);
+    }
+    100%{
+        transform:scale(1,1);
+    }
+}
+ </style>
   <h1>Practice Canvas</h1> 
 
   <div id="can"> 
