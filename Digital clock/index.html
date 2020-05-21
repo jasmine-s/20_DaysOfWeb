@@ -1,0 +1,145 @@
+ t<!doctype html>
+<html>
+ <head> 
+  <link href="https://fonts.googleapis.com/css?family=Advent+Pro|Baloo+Thambi+2|Concert+One|Cookie|Great+Vibes|Josefin+Sans|Kaushan+Script|Satisfy|Slabo+27px|Titillium+Web|Yanone+Kaffeesatz&amp;display=swap" rel="stylesheet"> 
+  <link rel="shortcut icon" type="mee/png" href="https://cdn.glitch.com/f04206de-f6ee-4045-86a5-3aa2649f233f%2Fmee.png?v=1588347082200.png"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+ </head> 
+ <body> 
+  <div id="div1"> 
+   <canvas style="font-size:x-large;" id="canvas" width="700" height="700"> 
+   </canvas> 
+  </div> 
+  <script>
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius *0.943;
+setInterval(drawClock, 1000);
+
+//drawClock();
+ 
+function drawFace(ctx, radius) {
+var grad;
+ 
+ctx.beginPath();
+ctx.arc(0, 0, radius, 0,2 * Math.PI);
+ctx.fillStyle = 'snow';
+ctx.fill();
+
+
+grad = ctx.createRadialGradient(0, 0 ,radius * 0.95, 0, 0, radius * 1.05);
+grad.addColorStop(0, '#000');
+grad.addColorStop(1, 'brown');
+grad.addColorStop(1, '#fff');
+ctx.strokeStyle = grad;
+ctx.lineWidth = radius*0.1;
+ctx.stroke();
+ 
+ctx.beginPath();
+ctx.arc(0, 0, radius * 0.1, 0, 2 * Math.PI);
+ctx.fillStyle = 'coral';
+ctx.fill();
+}
+ 
+function drawNumbers(ctx, radius) {
+var ang;
+var num;
+ctx.font =radius * 0.145 + "px times";
+
+ctx.textBaseline = "middle";
+ctx.textAlign = "center";
+for(num = 1; num < 13; num++){
+  
+ang = num * Math.PI / 6;
+ctx.rotate(ang);
+ctx.translate(0, -radius * 0.85);
+ctx.rotate(-ang);
+ctx.fillText(num.toString(), 0, 0);
+ctx.rotate(ang);
+ctx.translate(0, radius * 0.85);
+ctx.rotate(-ang);
+
+}
+}
+function drawClock() {
+  
+drawFace(ctx, radius);
+drawNumbers(ctx, radius);
+drawTime(ctx, radius);
+ctx.font = "90px arial";
+
+ctx.fillText("💕",120,150);
+
+}
+
+
+function drawTime(ctx, radius){
+var now = new Date();
+var hour = now.getHours();
+var minute = now.getMinutes();
+var second = now.getSeconds();
+//hour
+hour = hour%12;
+hour = (hour*Math.PI/6)+(minute*Math.PI/(6*60))+(second*Math.PI/(360*60));
+drawHand(ctx, hour, radius*0.5, radius*0.07);
+//minute
+minute = (minute*Math.PI/30)+(second*Math.PI/(30*60));
+drawHand(ctx, minute, radius*0.8, radius*0.07);
+// second
+second = (second*Math.PI/30);
+drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+function drawHand(ctx, pos, length, width) {
+ctx.beginPath();
+ctx.lineWidth = width;
+ctx.lineCap = "round";
+ctx.moveTo(0,0);
+ctx.rotate(pos);
+ctx.lineTo(0, -length);
+ctx.stroke();
+ctx.rotate(-pos);
+}
+ 
+ 
+</script> 
+  <style>
+      
+    
+    body{
+  background-color:#112;
+  display:flex;
+  color:#162447;
+font-family: 'Cookie';
+    font-size:20vh;
+    
+    text-align:center;
+}
+
+#div1{
+  margin:5%;
+  padding:8%;
+  display:flex;
+  opacity:0.95;
+  width:100%;
+  margin-top:20%;
+  background:coral;
+  box-shadow:inset 2px 2px 2px coral,inset 18px 4px 2px brown;
+border-radius:24%;
+}
+#canvas{
+    border-radius:24%;
+  padding:5px;
+  opacity:21px;
+  background:ghostwhite;
+  box-shadow:1px 3px 4px #000,inset 1px 3px 6px #000;
+  
+  opacity:0.8;
+  
+  }
+    </style> 
+  <p class="fixed-bottom" style="font-size:22px;color:#162447; background-color:#e43f5a;"> ©T20 Copyrights made by <i>Jasmine Shaik</i></p> 
+ </body>
+</html>
